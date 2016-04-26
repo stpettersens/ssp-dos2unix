@@ -15,7 +15,7 @@ see LICENSE file.
 
 void export_dos2unix(const Nan::FunctionCallbackInfo<v8::Value>& info) {
 
-    if (info.Length() < 1) {
+    if (info.Length() < 2) {
         Nan::ThrowTypeError("dos2unix-native: Wrong number of arguments");
         return;
     }
