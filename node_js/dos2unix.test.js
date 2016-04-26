@@ -44,7 +44,7 @@ describe('Test dos2unix:', function () {
     done()
   })
 
-  it('Should create archive using native implementation.', function (done) {
+  it('Use dos2unix using native implementation (which writes).', function (done) {
     dos2unix(sources[0], {native: true, feedback: true, write: true})
     let passed = checkLineEndings(fs.readFileSync(sources[0]).toString())
     assert.equal(passed, true)
