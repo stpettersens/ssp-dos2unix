@@ -5,7 +5,7 @@
   "main": "dos2unix.js",
   "scripts": {
     "install": "node-gyp rebuild",
-    "test": "mocha dos2unix.test.js"
+    "test": "mocha dos2unix.test.js --timeout 100000"
   },
   "repository": {
     "type": "git",
