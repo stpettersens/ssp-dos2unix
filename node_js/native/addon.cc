@@ -28,7 +28,6 @@ void export_dos2unix(const Nan::FunctionCallbackInfo<v8::Value>& info) {
 
     v8::String::Utf8Value filename(info[0]->ToString());
     int feedback = (int)info[1]->NumberValue();
-    int write = (int)info[2]->NumberValue();
     v8::Local<v8::Number> code = Nan::New(dos2unix(std::string(*filename)));
 
     if (code->IntegerValue() == 1 && feedback == 1) {

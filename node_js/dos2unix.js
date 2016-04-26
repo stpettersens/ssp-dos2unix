@@ -22,7 +22,7 @@ try {
 
 function isAscii (contents) {
   let ascii = true
-  for(let i = 0; i < contents.length; i++) {
+  for (let i = 0; i < contents.length; i++) {
     if (contents.charCodeAt(i) > 127) {
       ascii = false
       break
@@ -70,7 +70,7 @@ module.exports.dos2unix = function (filename, options) {
   let write = true
   if (options && options.write !== undefined) {
     write = options.write
-    if(!write) {
+    if (!write) {
       USE_NATIVE = false
     }
   }
@@ -86,8 +86,7 @@ module.exports.dos2unix = function (filename, options) {
       } else {
         return converted
       }
-    }
-    else if (feedback) {
+    } else if (feedback) {
       console.warn('dos2unix: File already has UNIX line endings or is binary.')
     }
   }
