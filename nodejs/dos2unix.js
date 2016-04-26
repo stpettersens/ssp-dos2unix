@@ -75,7 +75,7 @@ module.exports.dos2unix = function (filename, options) {
     }
   }
 
-  if (USE_NATIVE && native && write) {
+  if (USE_NATIVE && native) {
     native.dos2unix(filename, feedback ? 1 : 0)
   } else {
     let contents = fs.readFileSync(filename, 'utf8').toString()
