@@ -17,4 +17,4 @@ before_install:
   - npm install -g mocha
 
 script:
-  - $CXX --version
+  - sh build.sh
