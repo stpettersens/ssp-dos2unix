@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  ##- '5.1'
+  #- '5.1'
   - '4.2'
   - 'iojs'
 env:
@@ -17,4 +17,4 @@ before_install:
   - npm install -g mocha
 
 script:
-  - $(CXX) --version
+  - $CXX --version
