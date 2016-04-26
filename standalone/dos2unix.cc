@@ -2,7 +2,7 @@
 dos2unix implementation.
 Copyright 2016 Sam Saint-Pettersen.
 
-Released under the MIT License; 
+Released under the MIT License;
 see LICENSE file.
 */
 #include <iostream>
@@ -41,7 +41,6 @@ bool is_dos_eol(string filename) {
 }
 
 string to_unix_line_endings(string contents) {
-    int i = 0;
     string ucontents;
     for(char& c : contents) {
         if(c != '\r') ucontents.push_back(c);
