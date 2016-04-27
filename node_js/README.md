@@ -22,8 +22,7 @@ console.log(converted) // Returned text as string without any carriage returns (
 
 ##### Options:
 
-Omittable options object with following allowable parameters
-(same as [ssp-dos2unix](http://github.com/stpettersens/ssp-dos2unix)):
+Omittable options object with following allowable parameters:
 
 * `native` (Boolean) - Force use of native module (cannot be used with write: false).
 * `feedback` (Boolean) - Display feedback (*"File already has UNIX line endings..."*).
