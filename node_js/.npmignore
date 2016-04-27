@@ -1,4 +1,6 @@
 build/
 node_modules/
 .gitignore
+.npmignore
 test.js
+*.tgz

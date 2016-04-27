@@ -83,6 +83,7 @@ module.exports.dos2unix = function (filename, options) {
       let converted = toUnixLineEndings(contents)
       if (write) {
         fs.writeFileSync(filename, converted, 'utf8', 'wb')
+        return 0
       } else {
         return converted
       }
@@ -90,5 +91,5 @@ module.exports.dos2unix = function (filename, options) {
       console.warn('dos2unix: File already has UNIX line endings or is binary.')
     }
   }
-  return 0
+  return 1
 }
