@@ -1,7 +1,7 @@
 {
   "name": "ssp-dos2unix",
   "version": "1.0.0",
-  "description": "dos2unix implementation with Node.js ",
+  "description": "dos2unix implementation with Node.js",
   "main": "dos2unix.js",
   "scripts": {
     "install": "node-gyp rebuild",
