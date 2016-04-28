@@ -13,7 +13,7 @@
 ##### Usage:
 ```js
 'use strict'
-const gulp = require('gulp')
+const dos2unix = require('dos2unix').dos2unix
 
 let converted = dos2unix('README.md', {native: false, feedback: true, writable: false})
 console.log(converted) // Returned text as string without any carriage returns (\r).
