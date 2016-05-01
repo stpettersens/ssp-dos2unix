@@ -1,6 +1,6 @@
 {
   "name": "ssp-dos2unix",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "dos2unix implementation with Node.js",
   "main": "dos2unix.js",
   "scripts": {

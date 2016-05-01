@@ -78,6 +78,7 @@ module.exports.dos2unix = function (filename, options) {
   if (USE_NATIVE && native) {
     native.dos2unix(filename, feedback ? 1 : 0)
   } else {
+    let message = 'dos2unix: File already has UNIX line endings or is binary.'
     let contents = fs.readFileSync(filename, 'utf8').toString()
     if (isAscii(contents) && isDOS_eol(contents)) {
       let converted = toUnixLineEndings(contents)
@@ -85,10 +86,13 @@ module.exports.dos2unix = function (filename, options) {
         fs.writeFileSync(filename, converted, 'utf8', 'wb')
         return 0
       } else {
+        if (feedback) {
+          console.warn(message)
+        }
         return converted
       }
     } else if (feedback) {
-      console.warn('dos2unix: File already has UNIX line endings or is binary.')
+      console.warn(message)
     }
   }
   return 1
