@@ -4,7 +4,6 @@
 [![Build Status](https://travis-ci.org/stpettersens/ssp-dos2unix.png?branch=master)](https://travis-ci.org/stpettersens/ssp-dos2unix)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
 [![npm version](https://badge.fury.io/js/ssp-dos2unix.svg)](http://npmjs.com/package/ssp-dos2unix)
-[![Dependency Status](https://david-dm.org/stpettersens/ssp-dos2unix.png?theme=shields.io)](https://david-dm.org/stpettersens/ssp-dos2unix) [![Development Dependency Status](https://david-dm.org/stpettersens/ssp-dos2unix/dev-status.png?theme=shields.io)](https://david-dm.org/stpettersens/ssp-dos2unix#info=devDependencies)
 
 ##### Install:
 
