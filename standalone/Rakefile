@@ -1,0 +1,28 @@
+require 'os'
+
+cxx = 'g++'
+targeta = 'dos2unix'
+targetb = 'unix2dos'
+
+if OS.windows? then
+    targeta = 'dos2unix.exe'
+    targetb = 'unix2dos.exe'
+end
+
+task :default do
+    sh "#{cxx} --std=c++11 dos2unix.cc -o #{targeta}c"
+    sh "strip #{targeta}c"
+    sh "#{cxx} --std=c++11 unix2dos.cc -o #{targetb}c"
+    sh "strip #{targetb}c"
+end
+
+task :upx => [:default] do
+    if File.exists?(targeta) then
+        File.delete(targeta)
+    end
+    sh "upx -9 #{targeta}c -o #{targeta}"
+    if File.exists?(targetb) then
+        File.delete(targetb)
+    end
+    sh "upx -9 #{targetb}c -o #{targetb}"
+end

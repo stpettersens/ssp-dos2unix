@@ -9,6 +9,7 @@ see LICENSE file.
 #include <fstream>
 #include <sstream>
 #include <string>
+#include <cstdlib>
 using namespace std;
 
 bool is_ascii(string filename) {
@@ -49,6 +50,13 @@ string to_unix_line_endings(string contents) {
 }
 
 int main(int argc, char const *argv[]) {
+    if (argc == 1) {
+        cout << "dos2unix implementation." << endl;
+        cout << "Copyright 2016 Sam Saint-Pettersen." << endl;
+        cout << "\nReleased under the MIT License.\n" << endl;
+        cout << "Usage: dos2unix <file>" << endl;
+        exit(0);
+    }
     if(is_ascii(string(argv[1])) && is_dos_eol(string(argv[1]))) {
         ifstream i;
         stringstream contents;
